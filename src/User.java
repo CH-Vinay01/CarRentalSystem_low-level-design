@@ -43,6 +43,9 @@ public class User{
 
             UserDetails ud = new UserDetails(name, email, pass, mobile, gender, aadharno, lt, address);
             addperson(ud);
+            System.out.println("_________________________________________________________________________________");
+            System.out.println();
+            System.out.println("        ----->User Registered Successfully<-----");
             return login();
         }
     }
@@ -50,7 +53,8 @@ public class User{
         System.out.println();
         System.out.println("_________________________________________________________________________________");
         System.out.println();
-        System.out.println("Please Enter your login details : ");
+        System.out.println();
+        System.out.println("            ----->Please Enter your login details <-----");
         System.out.println();
         Scanner sc = new Scanner(System.in);
         System.out.print("Please enter Email : ");
@@ -60,10 +64,11 @@ public class User{
         String pass = sc.nextLine();
         if(isUsersExists(email)){
             if(verifypassword(email,pass)) {
-                System.out.println("Login Successfull");
+                System.out.println("_________________________________________________________________________________");
+                System.out.println("            ----->Login Successfull<-----");
                 return true;
             }
-            System.out.println("Invalid Login Details");
+            System.out.println("            ----->Invalid Login Details<-----");
         }
         return false;
     }

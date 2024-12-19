@@ -21,8 +21,9 @@ public class Main {
 
 
 
-        System.out.println("__________________________________________________________________________");
+        System.out.println();
         System.out.println("Welcome for Z-Car Applications");
+        System.out.println("__________________________________________________________________________");
         System.out.println("Enter type of Account : ");
         System.out.println("If User enter 1");
         System.out.println("Tf Admin enter 2");
@@ -30,36 +31,37 @@ public class Main {
         int type = sc.nextInt();
         sc.nextLine();
         System.out.println();
-        System.out.println("Login OR SignUp");
+        System.out.println("___________Login OR SignUp_______________");
         System.out.println("For Login enter 1");
         System.out.println("For SignUp enter 2");
         int los = sc.nextInt();
         if(type == 1 && los ==1){
             if(user.login()){
-                System.out.println("Login Succeccful");
+                System.out.println("        ----->Login Succeccful<-----");
                 ulg = true;
 
             }
         } else if (type == 1 && los ==2) {
             if(user.signup()){
-                System.out.println("User Registered Successfully");
                 ulg = true;
             }
         } else if (type == 2 && los == 1) {
             if(admin.login()){
-                System.out.println("Login Successful");
+                System.out.println("____________________________________________________");
+                System.out.println("            ----->Login Successful<-----");
                 alg = true;
             }
         } else if (type == 2 && los == 2) {
-            System.out.println("You cant SignUp Contact Admin :");
+            System.out.println("____________________________________________________________________");
+            System.out.println("            ----->You cant SignUp Contact Admin <-----");
         } else if (type == 3 && los == 1) {
             if(driver.login()){
-                System.out.println("Login Successfull");
+                System.out.println("____________________________________________________");
+                System.out.println("            ----->Login Successfull<-----");
                 dlg = true;
             }
         } else if (type == 3 && los == 2) {
             if(user.signup()){
-                System.out.println("Driver Registration Successfull");
                 dlg = true;
             }
         }else{

@@ -47,6 +47,9 @@ public class Driver {
         String lt = sc.nextLine();
         DriverDetails ud = new DriverDetails(name, email, pass, mobile, gender, aadharno, lt, address);
         addperson(ud);
+        System.out.println("_____________________________________________________________________________");
+        System.out.println();
+        System.out.println("       ----->Driver Registration Successfull<-----");
         return login();
     }
     public boolean login(){
