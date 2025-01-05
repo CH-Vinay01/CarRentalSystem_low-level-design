@@ -1,0 +1,215 @@
+Low Level Design for Car Rental System : Using Java
+_______________________________________________________
+
+The Works of the code in Console Example
+_______________________________________
+
+	Already a Customer : No
+	 	________________________________________________________
+		|							|
+		|		-----> Signup process <-----		|
+		|Please enter the Username : Vinay			|
+		|Please enter the Email : 22pa1a4522@vishnu.edu.in	|
+		|Please enter the Gender : Male				|
+		|Please enter the contact no : 9392687185		|
+		|Please enter the Password : Zail@123			|
+		|Confirm Password : Zail@123 				|
+		|Enter the Aadhar No : 5092 0381 9483			|
+		|Enter the Driving Licence Type : MCWG			|
+		|Enter the Licence_id No : MCWG2345			|
+		|							|
+		|	-----> Account Created Successfully <-----	|
+		|_______________________________________________________|
+
+		Exceptional Case --->
+			Sign in not work if he was already customer. By checking email.
+			_________________________________________________________
+			|							 |
+			|		-----> Signup process <-----		 |
+			|Please enter the Username : Vinay			 |
+			|Please enter the Email : 22pa1a4522@vishnu.edu.in	 |
+			|							 |
+			| 	-----> Account Already Exist.... <-----		 |
+			|________________________________________________________|
+
+
+	Now Login ----->
+		________________________________________________________
+		|							|
+		|	-----> Login Process <-----			|
+		|Please enter username or email : Vinay			|
+		|Please enter the password : Zail@123			|
+		|							|
+		|	-----> Login Successful <-----			|
+		|_______________________________________________________|
+
+	
+	What to Rent Interface Must dropdown --->
+		________________________________________________________
+		|							|
+		|What type of Vehicle you want to rent : 		|
+		|I)   Car enter  0					|
+		|II)  Bike enter 1					|
+		|III) Van enter  2					|
+		|Please Enter the Vehicle Number you want to Go with 	|
+		|----> 1						|
+		|							|
+		|Here are the Available Cars For Rent.			|
+		|_______________________________________________________|
+
+
+	Display the Available Cars for Rent --->
+		________________________________________________________
+		|							|
+		|Cars Available ----->					|
+		|							|
+		|	1)Car Name : Hyundai i20 			|
+		|	  Total Quantity : 2				| 
+		|							|
+		|	2)Car Name : Tata SUV				|
+		|	  Total Quantity : 1				|
+		|							|
+		|	3)Car Name : Suzuki Shift			|
+		|	  Total Quantity : 2				|
+		|_______________________________________________________|
+
+		Exceptional Case --->
+			________________________________________________________
+			|							|
+			|What type of Vehicle you want to rent : 		|
+			|I)   Car enter  0					|
+			|II)  Bike enter 1					|
+			|III) Van enter  2					|
+			|Please Enter the Vehicle Number you want to Go with 	|
+			|-----> 2						|
+			|							|
+			|Due to your Licence, Cannot Rent this type of Vehicle	|
+			|Enter 1 to Update Your	Licence.			|
+			|Enter 2 to Continue to Rent another Vehicle.		|
+			|							|
+			|Enter the Option Number you want to : 1		|
+			|_______________________________________________________|
+
+			If the input is 1 ----->
+			
+				________________________________________________
+				|						|
+				|	-----> Update Your Licence <-----	|
+				|Please Enter Password : Zail@123		|
+				|Please Enter Licence Type : MCWG		|
+				|Please Enter Licence_id No : MCWG2345		|
+				|_______________________________________________|
+
+
+			If the input is 2 -----> Redirect to Vehicle
+				________________________________________________
+				|						|
+				|What type of Vehicle you want to rent : 	|
+				|I)   Car enter  0				|
+				|II)  Bike enter 1				|
+				|III) Van enter  2				|
+				|						|
+
+	Car Selection and Car Allocation --->
+		
+		________________________________________________________
+		|							|
+		|Enter the Car Name You want to Rent : Hyundai i20	|
+		|Enter the Date you want to rent car : 17-12-2023	|
+		|Enter how many days you rent car : 7			|
+		|Please Confirm to Generate Invoice (Y/N) : Y		|
+		|							|
+		|							|
+		|		…Processing Your Request…		|
+		|							|
+		|							|
+		|							|
+		|Please Enter the address details you want pick----->	|
+		|Enter the City : Vijayawada				|
+		|Enter the State : Andhra Pradesh			|
+		|Enter the Country : India				|
+		|Contact No : 9392687185				|
+		|Enter the Area : Chittinagar Tailorpet			|
+		|Enter the Landmark : Near AB Colors			|
+		|Enter the Street : Jaggupilla Rama Rao Street		|
+		|Enter the D/No or FlatNo or House No : 6-1/17-43 	|
+		|Enter the Area Pincode : 520001			|
+		|							|
+		|							|
+		|		…Verifying Your Details…		|
+		|							|
+		|		…Generating Invoice…			|
+		|							|
+		|							|		
+		|Your Invoice -----> 					|
+		|							|
+		|Username : Vinay 					|
+		|Email : 22pa1a4522@vishnu.edu.in			|
+		|Gender : Male						|
+		|Allotted Car : Hyundai i20 				|
+		|Billing City : Vijayawada				|
+		|Billing State : Andhra Pradesh 			|
+		|Billing Country : India				|
+		|Billing Address : D/No 6-1/17-43 Chittinagar, Tailoepet|
+		|			Jagupilla Rama Rao Street, Near |
+		|			AB Colors, 520001.		|
+		|Your Contact Number : 9392687185			|
+		|Duration : 17-12-2024 to 24-12-2024			|
+		|No of days : 7 days 					|
+		|							|
+		|Total Amount : Rs 10000/-				|
+		|_______________________________________________________|
+		
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+Account -----> Login() or SignUp() Details:
+___________________________________
+
+---------------False---------------
+___________________________________
+
+	--> Create a ClassObject Customer() for newly Registered_Customer (New Instance for new customer)
+
+		Verify
+		__________________________
+		-----> Aadhar id
+		-----> Driving Licence
+		-----> details
+
+		Contact Details of Customer
+		___________________________
+		-----> Phno
+		-----> Address 1 ((D/no (or)House no(or)Flat No), landmark, Area, Street, City, State, Country
+		-----> Address 2 ((D/no (or)House no(or)Flat No), landmark, Area, Street, City, State, Country
+
+___________________________________________________________________________
+_________________________________
+
+Now the Customer is Ready to Use.
+_________________________________
+
+Customer can Rent a car or bike 
+-----> validateLicence()	He can`t rent a car with bike Licence So validate and if he try`s to attempt return ("You can`t Rent a Car with Bike Licence").
+-----> If validateLicence() Saticefies alot him according to Cust request.
+
+-----> If Cars Out of Stock() return cars Not present.
+
+___________________________________________________________________________
+__________________________________
+
+Cars(or)Bike(Or)Van -----> Interface Vechical() 
+	different vechicals with seprated by models.
+	whatVechical()----->returns String "Car" : "bike" : "Van"
+	getmodelNo()----->
+
